@@ -64,7 +64,7 @@ form div {
   --gunmetal-1: hsl(229, 15%, 21%);
   --gunmetal-2: hsl(216, 22%, 18%);
   --gainsboro: hsl(0, 7%, 88%);
-  --citrine: hsl(0, 97%, 45%);
+  --citrine: hsl(120, 97%, 45%);
   --xiketic: hsl(253, 21%, 13%);
   --gray-x: hsl(0, 0%, 74%);
   --white: hsl(0, 100%, 100%);
@@ -524,7 +524,7 @@ body.active {
 }
 
 .navbar-link {
-  color: var(--white);
+  color: black;
   font-size: var(--fs-8);
   font-weight: var(--fw-500);
   padding: 10px 25px;
