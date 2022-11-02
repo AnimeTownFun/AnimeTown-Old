@@ -1,29 +1,21 @@
 <%- include('navbar/head.ejs') %>
 
-
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
+<main>
+  <article>
+    <!-- 
         - #HERO
       -->
 
-      <section class="hero">
-        <div class="container">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-subtitle">AnimeTown!</p>
 
-          <div class="hero-content">
+          <h1 class="h1 hero-title">
+            Watch anime series and movies<strong> without ads. </strong>
+          </h1>
 
-            <p class="hero-subtitle">AnimeEZ!</p>
-
-            <h1 class="h1 hero-title">
-              Watch anime series and movies<strong> without ads. </strong>
-            </h1>
-
-            <!-- <div class="meta-wrapper">
+          <!-- <div class="meta-wrapper">
 
               <div class="badge-wrapper">
                 <div class="badge badge-fill">PG 18</div>
@@ -55,161 +47,108 @@
 
             </div> -->
 
-            <button onclick="location.href = '/tv-shows'" class="btn btn-primary">
-              <ion-icon name="play"></ion-icon>
+          <button onclick="location.href = '/tv-shows'" class="btn btn-primary">
+            <ion-icon name="play"></ion-icon>
 
-              <span>Browse Anime</span>
-            </button>
-
-          </div>
-
+            <span>Browse Anime</span>
+          </button>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-
-
-
-      <!-- 
+    <!-- 
         - #UPCOMING
       -->
 
-      <section class="upcoming">
-        <div class="container">
+    <section class="upcoming">
+      <div class="container">
+        <div class="flex-wrapper">
+          <div class="title-wrapper">
+            <p class="section-subtitle">ANIME</p>
 
-          <div class="flex-wrapper">
-
-            <div class="title-wrapper">
-              <p class="section-subtitle">ANIME</p>
-
-              <h2 class="h2 section-title">Recently Added</h2>
-            </div>
-
-           
-
+            <h2 class="h2 section-title">Recently Added</h2>
           </div>
-
-          <ul class="movies-list  has-scrollbar">
-<% recent.forEach((info) => { %>
-            <li>
-              <div class="movie-card">
-
-                <a href="/details/<%- info.id%>">
-                  <figure class="card-banner">
-                    <img src="<%- info.image%>" alt="<%- info.title %>">
-                  </figure>
-                </a>
-
-                <div class="title-wrapper">
-                  <a href="/details/<%- info.id %>">
-                    <h3 class="card-title"><%- info.title %></h3>
-                  </a>
-                  <time>Anime</time>
-                </div>
-
-                <div class="card-meta">
-                  <div class="badge badge-outline">Ep - <%- info.episodenumber %></div>
-
-              
-                </div>
-
-              </div>
-            </li>
-<% }) %>
-          
-          </ul>
-
         </div>
-      </section>
 
+        <ul class="movies-list has-scrollbar">
+          <% recent.forEach((info) => { %>
+          <li>
+            <div class="movie-card">
+              <a href="/details/<%- info.id%>">
+                <figure class="card-banner">
+                  <img src="<%- info.image%>" alt="<%- info.title %>" />
+                </figure>
+              </a>
 
+              <div class="title-wrapper">
+                <a href="/details/<%- info.id %>">
+                  <h3 class="card-title"><%- info.title %></h3>
+                </a>
+                <time>Anime</time>
+              </div>
 
+              <div class="card-meta">
+                <div class="badge badge-outline">
+                  Ep - <%- info.episodenumber %>
+                </div>
+              </div>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
 
-
-      <!-- 
+    <!-- 
         - #SERVICE
       -->
 
-     
-
-
-
-
-
-      <!-- 
+    <!-- 
         - #TOP RATED
       -->
 
-      <section class="top-rated">
-        <div class="container">
+    <section class="top-rated">
+      <div class="container">
+        <h2 class="h2 section-title">Popular Animes</h2>
 
-         
+        <% let i = 1 %>
 
-          <h2 class="h2 section-title">Popular Animes</h2>
+        <ul class="movies-list">
+          <% popular.forEach((info) => { %>
+          <li>
+            <div class="movie-card">
+              <a href="/details/<%- info.id%>">
+                <figure class="card-banner">
+                  <img src="<%- info.image %>" alt="<%- info.title %>" />
+                </figure>
+              </a>
 
-         <% let i = 1 %>
-
-          <ul class="movies-list">
-<% popular.forEach((info) => { %>
-            <li>
-              <div class="movie-card">
-
+              <div class="title-wrapper">
                 <a href="/details/<%- info.id%>">
-                  <figure class="card-banner">
-                    <img src="<%- info.image %>" alt="<%- info.title %>">
-                  </figure>
+                  <h3 class="card-title"><%- info.title %></h3>
                 </a>
 
-                <div class="title-wrapper">
-                  <a href="/details/<%- info.id%>">
-                    <h3 class="card-title"><%- info.title %></h3>
-                  </a>
-
-                  <time >Anime</time>
-                </div>
-
-                <div class="card-meta">
-                  <div class="badge badge-outline">Rank - <%- i %></div>
-
-                
-
-             
-                </div>
-
+                <time>Anime</time>
               </div>
-            </li>
-  <% i = i + 1 %>
-<% }) %>
-           
 
-          </ul>
+              <div class="card-meta">
+                <div class="badge badge-outline">Rank - <%- i %></div>
+              </div>
+            </div>
+          </li>
+          <% i = i + 1 %> <% }) %>
+        </ul>
+      </div>
+    </section>
 
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+    <!-- 
         - #TV SERIES
       -->
 
-     
-
-
-
-
-
-      <!-- 
+    <!-- 
         - #CTA
       -->
-
-     
-    </article>
-  </main>
-
-
-
+  </article>
+</main>
 
 <%- include('navbar/footer.ejs') %>
