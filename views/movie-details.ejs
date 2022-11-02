@@ -1,0 +1,133 @@
+<%- include('navbar/head.ejs') %>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #MOVIE DETAIL
+      -->
+
+      <section class="movie-detail">
+        <div class="container">
+
+          <figure class="movie-detail-banner">
+
+            <img src="<%- info.image %>">
+
+           
+
+          </figure>
+
+          <div class="movie-detail-content">
+
+            
+            <h1 class="h1 detail-title">
+              <strong class="text-white"><%- info.title %></strong>
+            </h1>
+
+            <div class="meta-wrapper">
+
+              <div class="badge-wrapper">
+                <div class="badge badge-fill">EP's - <%- info.totalepisode %></div>
+
+                <div class="badge badge-outline">HD</div>
+              </div>
+
+              <div class="ganre-wrapper">
+              
+                <a ><%- info.genres %></a>
+
+             
+              </div>
+
+              <div class="date-time">
+
+                <div>
+                  <ion-icon name="calendar-outline"></ion-icon>
+
+                  <time datetime="<%- info.relased %>"><%- info.relased %></time>
+                </div>
+               
+
+                <div>
+                  <ion-icon name="time-outline"></ion-icon>
+
+                  <time datetime="Type"><%- info.status %></time>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="storyline">
+            <%- info.summary %>
+            </p>
+
+            <div class="details-actions">
+
+           
+
+              <div class="title-wrapper">
+                <p class="title">GoGoAnime</p>
+
+                <p class="text">Gogoanime's server</p>
+              </div>
+
+              <a href="#episodes" class="btn btn-primary">
+                <ion-icon name="play"></ion-icon>
+
+                <span>Watch Now</span>
+              </a>
+
+            </div>
+
+           
+
+          </div>
+
+        </div>
+        
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TV SERIES
+      -->
+
+   
+
+    </article>
+    
+  </main>
+<section class="tv-series" id="episodes" >
+        <div class="container">
+          <h2 class="h2 section-title">Episodes</h2>
+          <ul class="episode">
+<% info.epList.forEach((ep) => { %>
+
+    
+			<li class="epi-me">
+				<a href="/watch/<%- ep.id %>">
+				<div title="EP <%- ep.number %>" class="name">
+				<span id="titleep"><%- ep.number %></span>
+				</div>
+				<div class="vien">
+				</div>
+				<div class="cate"> EP </div>
+				</a>
+			</li>	
+
+  
+  <% }) %>
+  </ul>
+        </div>
+</section>
+
+<%- include('navbar/footer.ejs') %>
+
+

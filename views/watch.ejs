@@ -1,0 +1,118 @@
+<%- include('navbar/head.ejs') %>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<style>
+#loader1 {
+  background:url("/images/loading.gif") center center no-repeat;
+  max-width: 100%;
+  width:1024;
+  height:576;
+  border:none;
+ 
+}
+ #loader1.active {
+  display:none;
+ 
+}
+    
+</style>
+
+  <main>
+    <article>
+  
+        <section class="lolipop movie-detail">
+          <div class="container">
+            <div class="movie-detail-content">
+
+            <% let me = chek[0].replace("-", " "); 
+            me = me.toUpperCase()  
+            %>
+
+            <a href="../../details/<%- chek[0] %>" class="h1 detail-title">
+              <strong class="text-white"><%- me %> </strong>
+              
+            </a>
+    </div>
+          </div>
+            <div class="chamoy">
+              <div id="loader1"> 
+              <center>
+               <iframe id="ifr" onload="resize(this)" allow="fullscreen" scrolling="no" src="<%- api_url %>watch/<%- chek[0]%>/<%- chek[1] %>" width="1024" style="max-width: 100%; max-height: 100%; border:none;" height="650" ></iframe>
+                </center>
+                
+                <center>
+                 <div class="details-actions" style=" position: relative;">
+
+           
+
+              <div class="title-wrapper">
+                <p class="title">GoGoAnime Server</p>
+
+                <p class="text">Go to Episodes Section</p>
+              </div>
+
+              <a href="#episodes" class="btn btn-primary">
+                <ion-icon name="play"></ion-icon>
+
+                <span>Go Now</span>
+              </a>
+
+            </div>
+              </center>
+
+
+  </div>
+            </div>
+          </div>
+             
+               
+           
+           
+          </section>
+      
+  </article>
+  </main>
+  <script>
+
+    
+    function resize(iFrame) {
+
+       x.style.backgroundImage = "url()"
+}
+
+ 
+
+let ifr = document.getElementById("ifr");
+let x = document.getElementById("loader1");
+
+  </script>
+ <section class="tv-series" id="episodes" >
+        <div class="container">
+          <h2 class="h2 section-title">Episodes</h2>
+          <ul class="episode">
+<% info.epList.forEach((ep) => { %>
+
+    
+			<li class="epi-me">
+				<a href="/watch/<%- ep.id %>">
+				<div title="EP <%- ep.number %>" class="name">
+				<span><%- ep.number %></span>
+				</div>
+				<div class="vien">
+				</div>
+				<div class="cate"> EP </div>
+				</a>
+			</li>	
+
+  
+  <% }) %>
+  </ul>
+        </div>
+</section>
+         
+
+
+
+
+
+<%- include('navbar/footer.ejs') %>
