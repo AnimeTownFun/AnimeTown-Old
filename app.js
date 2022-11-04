@@ -50,6 +50,7 @@ module.exports = async function () {
   console.log("Connected to " + port + " PORT");
 
   //1200000
+  app.use("/about-us", require("./routers/about/index"));
   app.use("/search", require("./routers/search/index.js"));
   app.use("/movies", require("./routers/movies/index.js"));
   app.use("/tv-shows", require("./routers/tvshows/index.js"));
