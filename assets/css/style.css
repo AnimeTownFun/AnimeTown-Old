@@ -6,6 +6,13 @@
   padding: 0 8px;
 }
 
+* {
+  margin-top: 30px;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
 .episode > .epi-me > a > .name {
   float: left;
   padding: 8px 0;
@@ -57,9 +64,9 @@ form div {
    */
 
   --rich-black-fogra-29: hsl(225, 25%, 9%);
-  --rich-black-fogra-39: hsl(170, 21%, 5%);
+  --rich-black-fogra-39: hsla(170, 21%, 5%);
   --raisin-black: hsl(228, 13%, 15%);
-  --eerie-black: hsl(207, 19%, 11%);
+  --eerie-black: hsl(204, 18%, 11%);
   --light-gray: hsl(0, 3%, 80%);
   --gunmetal-1: hsl(229, 15%, 21%);
   --gunmetal-2: hsl(216, 22%, 18%);
@@ -447,7 +454,6 @@ body.active {
 \*-----------------------------------*/
 
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -477,13 +483,11 @@ body.active {
 }
 
 .navbar {
-  position: fixed;
   top: 0;
   right: -300px;
-  background: var(--eerie-black);
-  width: 100%;
-  max-width: 300px;
-  height: 100%;
+  width: 20%;
+  max-width: 100px;
+  height: 20%;
   box-shadow: -1px 0 3px hsl(0, 0%, 0%, 0.2);
   transition: 0.15s ease-in;
   visibility: hidden;
@@ -498,7 +502,6 @@ body.active {
 
 .navbar-top {
   padding: 30px 25px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -537,7 +540,6 @@ body.active {
 }
 
 .navbar-social-list {
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -556,7 +558,6 @@ body.active {
 .overlay {
   position: fixed;
   inset: 0;
-  background: hsla(204, 18%, 11%, 0.8);
   opacity: 0;
   pointer-events: none;
   z-index: 1;
@@ -906,7 +907,7 @@ body.active {
 
 .detail-subtitle {
   font-size: var(--fs-5);
-  color: var(--citrine);
+  color: black;
   font-weight: var(--fw-700);
   margin-bottom: 10px;
 }
@@ -924,7 +925,7 @@ body.active {
 }
 
 .storyline {
-  color: var(--gray-x);
+  color: black;
   font-size: var(--fs-9);
   font-weight: var(--fw-500);
   line-height: 1.8;
@@ -944,7 +945,12 @@ body.active {
   margin-bottom: 30px;
 }
 
-.details-actions .share ion-icon {
+.details-actions {
+  font-size: 25px;
+  color: black;
+  margin-inline: auto;
+}
+.share ion-icon {
   font-size: 25px;
   color: var(--white);
   margin-inline: auto;
@@ -961,7 +967,7 @@ body.active {
 }
 
 .details-actions .title {
-  color: var(--white);
+  color: black;
   font-weight: var(--fw-700);
 }
 
@@ -1347,6 +1353,10 @@ body.active {
    * HEADER
    */
 
+  .header {
+    height: auto;
+  }
+
   .header.active {
     padding-block: 5px;
   }
@@ -1624,7 +1634,6 @@ body.active {
     transform-origin: bottom right;
     padding: 40px 50px;
   }
-
   .download-btn ion-icon {
     font-size: 30px;
     transform: rotate(-0.25turn);
