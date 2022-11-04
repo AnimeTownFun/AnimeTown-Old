@@ -11,7 +11,9 @@ app.get("/", async (req, res) => {
     if (secs.includes("disable")) {
       let results = await update_list(api_url, "disable");
       if (results.error === "404") {
-        return res.send("<h1> Error 404 </h1>");
+        return res.send(
+          "<h1> Error 404 </h1><br><p>Something Went Wrong...</p>"
+        );
       }
       let popular = results.popular;
       let recent = results.recent;
