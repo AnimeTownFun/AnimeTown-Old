@@ -1,113 +1,57 @@
 <%- include('navbar/head.ejs') %>
 
-
-
-
-
-
-  <main>
-    <article>
-
-
-
-
-
-
-    
-
-      
-
-
-
-
-
-
-
-      <!-- 
+<main>
+  <article>
+    <!-- 
         - #SERVICE
       -->
 
-     
-
-
-
-
-
-      <!-- 
+    <!-- 
         - #TOP RATED
       -->
 
-      <section class="top-rated">
-        <div class="container">
+    <section class="top-rated">
+      <div class="container">
+        <h2 class="h2 section-title">Latest Anime Movies</h2>
 
-         
+        <ul class="movies-list">
+          <% popular.forEach((info) => { %>
+          <li>
+            <div class="movie-card">
+              <a href="/details/<%- info.id%>">
+                <figure class="card-banner">
+                  <img src="<%- info.image %>" alt="<%- info.title %>" />
+                </figure>
+              </a>
 
-          <h2 class="h2 section-title">Latest Anime Movies</h2>
-
-       
-
-          <ul class="movies-list">
-<% popular.forEach((info) => { %>
-            <li>
-              <div class="movie-card">
-
+              <div class="title-wrapper">
                 <a href="/details/<%- info.id%>">
-                  <figure class="card-banner">
-                    <img src="<%- info.image %>" alt="<%- info.title %>">
-                  </figure>
+                  <h3 class="card-title"><%- info.title %></h3>
                 </a>
 
-                <div class="title-wrapper">
-                  <a href="/details/<%- info.id%>">
-                    <h3 class="card-title"><%- info.title %></h3>
-                  </a>
-
-                  <time >Anime</time>
-                </div>
-
-                <div class="card-meta">
-                              <% let rel = info.released.replace(":", "-") %>
-                  <div class="badge badge-outline"><%- rel %></div>
-
-                
-
-             
-                </div>
-
+                <time>Anime</time>
               </div>
-            </li>
-  
-<% }) %>
-           
 
-          </ul>
+              <div class="card-meta">
+                <% let rel = info.released.replace(":", "-") %>
+                <div class="badge badge-outline"><%- rel %></div>
+              </div>
+            </div>
+          </li>
 
-        </div>
-      </section>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
 
-
-
-
-
-      <!-- 
+    <!-- 
         - #TV SERIES
       -->
 
-     
-
-
-
-
-
-      <!-- 
+    <!-- 
         - #CTA
       -->
-
-     
-    </article>
-  </main>
-
-
-
+  </article>
+</main>
 
 <%- include('navbar/footer.ejs') %>
