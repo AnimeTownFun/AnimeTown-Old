@@ -1,5 +1,5 @@
 module.exports = {
-  api_url: "http://localhost:6969",
+  api_url: "http://animetown.fun:6969",
   // Enter your api host's url or if hosting locally/on your own computer use https://localhost:6969
 
   time_update: "200",
