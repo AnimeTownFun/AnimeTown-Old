@@ -1668,3 +1668,20 @@ body.active {
   height: 50%;
   object-fit: cover;
 }
+.about-us .abt-us-text {
+  text-align: center;
+  font-size: 50px;
+  color: var(--citrine);
+}
+.about-us .nmbr-header {
+  font-size: 2.5rem;
+  text-align: left;
+  color: rgb(15, 195, 15);
+  margin-bottom: 1cm;
+  padding-bottom: 1cm;
+}
+.about-us .Message {
+  margin-bottom: 1cm;
+  padding-bottom: 1cm;
+  color: var(--citrine);
+}
