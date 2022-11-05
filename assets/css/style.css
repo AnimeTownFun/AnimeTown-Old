@@ -1685,3 +1685,9 @@ body.active {
   padding-bottom: 1cm;
   color: var(--citrine);
 }
+.ad {
+  text-align: center;
+}
+.main-ad {
+  text-align: center;
+}
