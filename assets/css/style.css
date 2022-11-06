@@ -1,16 +1,20 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 @codewithsadee
+ */
+
+/*-----------------------------------*\
+ * #CUSTOM PROPERTY
+\*-----------------------------------*/
 .episode > .epi-me > a {
   color: #fff;
   display: block;
   width: 100%;
   float: left;
   padding: 0 8px;
-}
-
-* {
-  margin-top: 30px;
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
 }
 
 .episode > .epi-me > a > .name {
@@ -60,18 +64,18 @@ form div {
 }
 :root {
   /**
-   * colors
-   */
+ * colors
+ */
 
   --rich-black-fogra-29: hsl(225, 25%, 9%);
-  --rich-black-fogra-39: hsla(170, 21%, 5%);
+  --rich-black-fogra-39: hsl(170, 21%, 5%);
   --raisin-black: hsl(228, 13%, 15%);
-  --eerie-black: hsl(204, 18%, 11%);
+  --eerie-black: hsl(207, 19%, 11%);
   --light-gray: hsl(0, 3%, 80%);
   --gunmetal-1: hsl(229, 15%, 21%);
   --gunmetal-2: hsl(216, 22%, 18%);
   --gainsboro: hsl(0, 7%, 88%);
-  --citrine: hsl(120, 97%, 45%);
+  --citrine: hsl(129, 77%, 47%);
   --xiketic: hsl(253, 21%, 13%);
   --gray-x: hsl(0, 0%, 74%);
   --white: hsl(0, 100%, 100%);
@@ -79,8 +83,8 @@ form div {
   --jet: hsl(0, 0%, 20%);
 
   /**
-   * typography
-   */
+ * typography
+ */
 
   --ff-poppins: "Poppins", sans-serif;
 
@@ -101,21 +105,21 @@ form div {
   --fw-700: 700;
 
   /**
-   * transition
-   */
+ * transition
+ */
 
   --transition-1: 0.15s ease;
   --transition-2: 0.25s ease-in;
 
   /**
-   * spacing
-   */
+ * spacing
+ */
 
   --section-padding: 100px;
 }
 
 /*-----------------------------------*\
- * #RESET
+* #RESET
 \*-----------------------------------*/
 
 *,
@@ -171,7 +175,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #REUSED STYLE
+* #REUSED STYLE
 \*-----------------------------------*/
 
 .container {
@@ -179,8 +183,8 @@ body.active {
 }
 
 /**
- * TITLES & SUBTITLES
- */
+* TITLES & SUBTITLES
+*/
 
 .h1,
 .h2,
@@ -216,8 +220,8 @@ body.active {
 }
 
 /**
- * BADGE
- */
+* BADGE
+*/
 
 .badge {
   color: var(--white);
@@ -237,8 +241,8 @@ body.active {
 }
 
 /**
- * MOVIE META
- */
+* MOVIE META
+*/
 
 .meta-wrapper {
   display: flex;
@@ -288,8 +292,8 @@ body.active {
 }
 
 /**
- * BUTTONS
- */
+* BUTTONS
+*/
 
 .btn {
   color: var(--white);
@@ -320,8 +324,8 @@ body.active {
 }
 
 /**
- * MOVIE CARD
- */
+* MOVIE CARD
+*/
 
 .movies-list {
   display: grid;
@@ -421,8 +425,8 @@ body.active {
 }
 
 /**
- * CUSTOM SLIDER & SCROLLBAR
- */
+* CUSTOM SLIDER & SCROLLBAR
+*/
 
 .movies-list.has-scrollbar {
   display: flex;
@@ -450,11 +454,11 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #HEADER
+* #HEADER
 \*-----------------------------------*/
 
 .header {
-  background-image: url("https://wallpapercave.com/wp/wp6661530.jpg");
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -464,7 +468,7 @@ body.active {
 }
 
 .header.active {
-  background-color: hsla(0, 0%, 0%, 0.022);
+  background: var(--eerie-black);
   padding-block: 20px;
 }
 
@@ -484,11 +488,13 @@ body.active {
 }
 
 .navbar {
+  position: fixed;
   top: 0;
   right: -300px;
-  width: 20%;
-  max-width: 100px;
-  height: 20%;
+  background: var(--eerie-black);
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
   box-shadow: -1px 0 3px hsl(0, 0%, 0%, 0.2);
   transition: 0.15s ease-in;
   visibility: hidden;
@@ -503,6 +509,7 @@ body.active {
 
 .navbar-top {
   padding: 30px 25px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -528,7 +535,7 @@ body.active {
 }
 
 .navbar-link {
-  color: rgb(73, 137, 143);
+  color: var(--white);
   font-size: var(--fs-8);
   font-weight: var(--fw-500);
   padding: 10px 25px;
@@ -541,6 +548,7 @@ body.active {
 }
 
 .navbar-social-list {
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -559,6 +567,7 @@ body.active {
 .overlay {
   position: fixed;
   inset: 0;
+  background: hsla(204, 18%, 11%, 0.8);
   opacity: 0;
   pointer-events: none;
   z-index: 1;
@@ -571,7 +580,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #HERO
+* #HERO
 \*-----------------------------------*/
 
 .hero {
@@ -607,11 +616,11 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #UPCOMING
+* #UPCOMING
 \*-----------------------------------*/
 
 /*-----------------------------------*\
- * #TOP RATED
+* #TOP RATED
 \*-----------------------------------*/
 
 .top-rated {
@@ -643,7 +652,7 @@ body.active {
 
 .top-rated .filter-btn:focus {
   color: var(--citrine);
-  text-shadow: 0 3px 25px hsla(126, 97%, 45%, 0.5);
+  text-shadow: 0 3px 25px hsla(57, 97%, 45%, 0.5);
 }
 
 .top-rated .filter-btn:focus::before,
@@ -666,7 +675,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #TV SEREIS
+* #TV SEREIS
 \*-----------------------------------*/
 
 .tv-series {
@@ -680,7 +689,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #CTA
+* #CTA
 \*-----------------------------------*/
 
 .cta {
@@ -738,7 +747,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #FOOTER
+* #FOOTER
 \*-----------------------------------*/
 
 .footer-top {
@@ -838,7 +847,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #GO TO TOP
+* #GO TO TOP
 \*-----------------------------------*/
 
 .go-top {
@@ -865,7 +874,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #MOVIE DETAIL 
+* #MOVIE DETAIL 
 \*-----------------------------------*/
 
 .movie-detail {
@@ -908,7 +917,7 @@ body.active {
 
 .detail-subtitle {
   font-size: var(--fs-5);
-  color: black;
+  color: var(--citrine);
   font-weight: var(--fw-700);
   margin-bottom: 10px;
 }
@@ -926,7 +935,7 @@ body.active {
 }
 
 .storyline {
-  color: black;
+  color: var(--gray-x);
   font-size: var(--fs-9);
   font-weight: var(--fw-500);
   line-height: 1.8;
@@ -946,12 +955,7 @@ body.active {
   margin-bottom: 30px;
 }
 
-.details-actions {
-  font-size: 25px;
-  color: black;
-  margin-inline: auto;
-}
-.share ion-icon {
+.details-actions .share ion-icon {
   font-size: 25px;
   color: var(--white);
   margin-inline: auto;
@@ -968,7 +972,7 @@ body.active {
 }
 
 .details-actions .title {
-  color: black;
+  color: var(--white);
   font-weight: var(--fw-700);
 }
 
@@ -1007,29 +1011,29 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #MEDIA QUERIES
+* #MEDIA QUERIES
 \*-----------------------------------*/
 
 /**
- * responsive for large than 550px screen
- */
+* responsive for large than 550px screen
+*/
 
 @media (min-width: 550px) {
   /**
-   * CUSTOM PROPERTY
-   */
+ * CUSTOM PROPERTY
+ */
 
   :root {
     /**
-     * typography
-     */
+   * typography
+   */
 
     --fs-1: 42px;
   }
 
   /**
-   * REUSED STYLE
-   */
+ * REUSED STYLE
+ */
 
   .container {
     max-width: 540px;
@@ -1044,8 +1048,8 @@ body.active {
   }
 
   /**
-   * HERO
-   */
+ * HERO
+ */
 
   .hero {
     min-height: unset;
@@ -1056,16 +1060,16 @@ body.active {
   }
 
   /**
-   * UPCOMING
-   */
+ * UPCOMING
+ */
 
   .upcoming .movies-list > li {
     min-width: calc(50% - 15px);
   }
 
   /**
-   * SERVICE
-   */
+ * SERVICE
+ */
 
   .service-list > li:first-child {
     padding-bottom: 30px;
@@ -1086,8 +1090,8 @@ body.active {
   }
 
   /**
-   * MOVIE DETAIL
-   */
+ * MOVIE DETAIL
+ */
 
   .detail-subtitle {
     --fs-5: 22px;
@@ -1099,36 +1103,33 @@ body.active {
 }
 
 /**
- * responsive for large than 768px screen
- */
+* responsive for large than 768px screen
+*/
 
 @media (min-width: 768px) {
   /**
-   * CUSTOM PROPERTY
-   */
+ * CUSTOM PROPERTY
+ */
 
   :root {
     /**
-     * typography
-     */
+   * typography
+   */
 
     --fs-2: 36px;
   }
 
   /**
-   * REUSED STYLE
-   */
+ * REUSED STYLE
+ */
 
   .container {
     max-width: 720px;
   }
 
   /**
-   * HEADER
-   */
-  .header {
-    height: 2cm;
-  }
+ * HEADER
+ */
 
   .header .container {
     gap: 30px;
@@ -1252,16 +1253,16 @@ body.active {
   }
 
   /**
-   * HERO
-   */
+ * HERO
+ */
 
   .hero-content {
     margin-top: 90px;
   }
 
   /**
-   * SERVICE
-   */
+ * SERVICE
+ */
 
   .service-btn {
     right: -20px;
@@ -1273,8 +1274,8 @@ body.active {
   }
 
   /**
-   * CTA
-   */
+ * CTA
+ */
 
   .cta-form {
     position: relative;
@@ -1294,8 +1295,8 @@ body.active {
   }
 
   /**
-   * FOOTER
-   */
+ * FOOTER
+ */
 
   .footer-brand-wrapper .logo {
     margin: 0;
@@ -1322,8 +1323,8 @@ body.active {
   }
 
   /**
-   * MOVIE DETAIL
-   */
+ * MOVIE DETAIL
+ */
 
   .detail-subtitle {
     --fs-5: 26px;
@@ -1335,13 +1336,13 @@ body.active {
 }
 
 /**
- * responsive for large than 992px screen
- */
+* responsive for large than 992px screen
+*/
 
 @media (min-width: 992px) {
   /**
-   * REUSED STYLE
-   */
+ * REUSED STYLE
+ */
 
   .container {
     max-width: 960px;
@@ -1354,12 +1355,8 @@ body.active {
   }
 
   /**
-   * HEADER
-   */
-
-  .header {
-    height: auto;
-  }
+ * HEADER
+ */
 
   .header.active {
     padding-block: 5px;
@@ -1401,8 +1398,8 @@ body.active {
   }
 
   /**
-   * HERO
-   */
+ * HERO
+ */
 
   .hero {
     background-position: right;
@@ -1418,8 +1415,8 @@ body.active {
   }
 
   /**
-   * UPCOMING
-   */
+ * UPCOMING
+ */
 
   .upcoming .flex-wrapper {
     display: flex;
@@ -1440,8 +1437,8 @@ body.active {
   }
 
   /**
-   * SERVICE
-   */
+ * SERVICE
+ */
 
   .service .container {
     display: flex;
@@ -1464,8 +1461,8 @@ body.active {
   }
 
   /**
-   * CTA
-   */
+ * CTA
+ */
 
   .cta {
     text-align: left;
@@ -1489,8 +1486,8 @@ body.active {
   }
 
   /**
-   * MOVIE DETAIL
-   */
+ * MOVIE DETAIL
+ */
 
   .movie-detail {
     padding-bottom: 200px;
@@ -1516,26 +1513,26 @@ body.active {
 }
 
 /**
- * responsive for large than 1200px screen
- */
+* responsive for large than 1200px screen
+*/
 
 @media (min-width: 1200px) {
   /**
-   * CUSTOM PROPERTY
-   */
+ * CUSTOM PROPERTY
+ */
 
   :root {
     /**
-     * typography
-     */
+   * typography
+   */
 
     --fs-1: 60px;
     --fs-4: 26px;
   }
 
   /**
-   * REUSED STYLE
-   */
+ * REUSED STYLE
+ */
 
   .container {
     max-width: 1320px;
@@ -1548,8 +1545,8 @@ body.active {
   }
 
   /**
-   * HEADER
-   */
+ * HEADER
+ */
   @media screen and (max-width: 1000px) {
     #eps {
       width: 100%;
@@ -1574,24 +1571,24 @@ body.active {
   }
 
   /**
-   * HERO
-   */
+ * HERO
+ */
 
   .hero .container {
     width: 1320px;
   }
 
   /**
-   * UPCOMING
-   */
+ * UPCOMING
+ */
 
   .upcoming .movies-list > li {
     min-width: calc(25% - 22.5px);
   }
 
   /**
-   * SERVICE
-   */
+ * SERVICE
+ */
 
   .service-content {
     width: calc(100% - 700px);
@@ -1607,16 +1604,16 @@ body.active {
   }
 
   /**
-   * CTA
-   */
+ * CTA
+ */
 
   .cta .container {
     max-width: 1150px;
   }
 
   /**
-   * MOVIE DETAIL
-   */
+ * MOVIE DETAIL
+ */
 
   .movie-detail {
     padding-bottom: var(--section-padding);
@@ -1638,6 +1635,7 @@ body.active {
     transform-origin: bottom right;
     padding: 40px 50px;
   }
+
   .download-btn ion-icon {
     font-size: 30px;
     transform: rotate(-0.25turn);
@@ -1668,6 +1666,7 @@ body.active {
   height: 50%;
   object-fit: cover;
 }
+
 .about-us .abt-us-text {
   text-align: center;
   font-size: 50px;
