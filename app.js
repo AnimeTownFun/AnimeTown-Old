@@ -57,4 +57,13 @@ module.exports = async function () {
   app.use("/details", require("./routers/anime/details.js"));
   app.use("/watch", require("./routers/anime/watch.js"));
   app.use("/", require("./routers/index.js"));
+
+  // POST Requests
+  app.use("/about-us", require("./routers/about/index.post"));
+  app.use("/search", require("./routers/search/index.post.js"));
+  app.use("/movies", require("./routers/movies/index.post.js"));
+  app.use("/tv-shows", require("./routers/tvshows/index.post.js"));
+  app.use("/details", require("./routers/anime/details.post.js"));
+  app.use("/watch", require("./routers/anime/watch.post.js"));
+  app.use("/", require("./routers/index.post.js"));
 };
