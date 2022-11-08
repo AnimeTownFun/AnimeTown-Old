@@ -7,14 +7,14 @@ module.exports = async function (api_url, secs) {
   if (api_url.includes("https")) {
     cutted = api_url.replace("https://", "");
     if (cutted.includes("/")) {
-      console.log(chalk.cyan("CHECK SUCCESSFULL. API URL IS VALID."));
+      console.log(chalk.cyanBright("CHECK SUCCESSFULL. API URL IS VALID."));
       update_list(api_url, secs);
       return `${api_url}`;
     }
   } else if (api_url.includes("http")) {
     cutted = api_url.replace("http://", "");
     if (!cutted.includes("/")) {
-      console.log(chalk.green("CHECK SUCCESSFULL. API URL IS VALID."));
+      console.log(chalk.greenBright("CHECK SUCCESSFULL. API URL IS VALID."));
       update_list(api_url + "/", secs);
       return `${api_url}/`;
     }
