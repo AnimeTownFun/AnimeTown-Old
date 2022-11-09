@@ -6,6 +6,10 @@
  * copyright 2022 @codewithsadee
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*-----------------------------------*\
  * #CUSTOM PROPERTY
 \*-----------------------------------*/
