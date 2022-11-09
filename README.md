@@ -3,7 +3,7 @@
 A free anime watching website
 
 ## Status:
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AnimeTownFun&repo=AnimeTown.Fun)](https://github.com/anuraghazra/github-readme-stats)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AnimeTownFun&repo=AnimeTown.Fun)](https://github.com/AnimeTownFun/AnimeTown.Fun)
 
 ## Contributors
 
